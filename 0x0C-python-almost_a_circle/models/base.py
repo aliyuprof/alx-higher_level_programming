@@ -1,16 +1,19 @@
 #!/usr/bin/python3
 """ base classs """
 
+
 class Base:
 
     """This represent a classs """
 
     __nb_objects = 0
+
     def __init__(self, id=None):
         """ Constructor method
 
             args:
-                id(int) 
+                id(int).
+
         """
 
         if id is not None:
@@ -18,6 +21,7 @@ class Base:
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
+
     @staticmethod
     def to_json_string(list_dictionaries: dict):
         """list to json"""
@@ -123,4 +127,3 @@ class Base:
             pen.right(90)
 
         window.exitonclick()
-
